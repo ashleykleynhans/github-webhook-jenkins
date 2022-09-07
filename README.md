@@ -104,7 +104,7 @@ to AWS Lambda (this is installed as part of the dependencies above):
 zappa deploy
 ```
 6. Take note of the URL that is returned by the `zappa deploy` command,
-eg. `https://1d602d00.execute-api.us-east-1.amazonaws.com/production`
+eg. `https://1d602d00.execute-api.us-east-1.amazonaws.com/github-webhook`
    (obviously use your own and don't copy and paste this one, or your
 Webhook will not work).
 
@@ -128,7 +128,7 @@ zappa status
 8. Test your webhook by making a curl request to the URL that was returned
 by `zappa deploy`:
 ```
-curl https://1d602d00.execute-api.us-east-1.amazonaws.com/production
+curl https://1d602d00.execute-api.us-east-1.amazonaws.com/github-webhook
 ```
 You should expect the following response:
 ```json
