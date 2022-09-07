@@ -82,11 +82,11 @@ to configure your AWS Lambda deployment:
 ```json
 {
     "github-webhook": {
-        "app_function": "github_webhooks.app",
+        "app_function": "webhook.app",
         "aws_region": "us-east-2",
         "lambda_description": "Github Webhook Proxy for Jenkins",
         "profile_name": "default",
-        "project_name": "github-webhook",
+        "project_name": "yourproject",
         "runtime": "python3.9",
         "s3_bucket": "github-webhooks",
         "tags": {
