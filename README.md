@@ -136,3 +136,7 @@ You should expect the following response:
 ```
 9. Update your Webhook URL in Github to the one returned by the
 `zappa deploy` command.
+10. You can view your logs by running:
+```bash
+zappa tail
+```
