@@ -36,7 +36,7 @@ brew link python@3.9
 brew update
 brew upgrade python@3.9
 ```
-5Export the environment variable for your Jenkins URL that is required by the webhook:
+5. Export the environment variable for your Jenkins URL that is required by the webhook:
 ```bash
 export JENKINS_URL="http://jenkins.example.com"
 ```
