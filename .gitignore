@@ -3,3 +3,4 @@ zappa_settings.json
 venv/*
 .vscode
 .idea
+.DS_Store

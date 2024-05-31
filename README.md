@@ -1,8 +1,8 @@
 # Github Webhook Proxy for Jenkins
 
-[![Python Version: 3.9](
-https://img.shields.io/badge/Python%20application-v3.9-blue
-)](https://www.python.org/downloads/release/python-3913/)
+[![Python Version: 3.12](
+https://img.shields.io/badge/Python%20application-v3.12-blue
+)](https://www.python.org/downloads/release/python-3123/)
 [![License: Apache 2.0](
 https://img.shields.io/github/license/ashleykleynhans/github-webhook-jenkins?ts=300
 )](https://opensource.org/licenses/GPL-3.0)
@@ -22,21 +22,16 @@ webhook and proxies it through to your Jenkins instance for you.
 ```bash
 brew install ngrok
 ```
-2. Ensure your System Python3 version is 3.9, but greater than 3.9.1.
+2. Ensure your System Python3 version is 3.12.
 ```bash
 python3 -V
 ```
-3. If your System Python is not 3.9:
+3. If your System Python is not 3.12:
 ```bash
-brew install python@3.9
-brew link python@3.9
+brew install python@3.12
+brew link python@3.12
 ```
-4. If your Sytem Python is 3.9 but not greater than 3.9.1:
-```bash
-brew update
-brew upgrade python@3.9
-```
-5. Export the environment variable for your Jenkins URL that is required by the webhook:
+4. Export the environment variable for your Jenkins URL that is required by the webhook:
 ```bash
 export JENKINS_URL="http://jenkins.example.com"
 ```
@@ -64,10 +59,10 @@ ngrok http 8090
 
 ## Deploy to AWS Lambda
 
-1. Create a Python 3.9 Virtual Environment:
+1. Create a Python 3.12 Virtual Environment:
 ```bash
-python3 -m venv venv/py3.9
-source venv/py3.9/bin/activate
+python3 -m venv venv/py3.12
+source venv/py3.12/bin/activate
 ```
 2. Upgrade pip.
 ```bash
@@ -87,7 +82,7 @@ to configure your AWS Lambda deployment:
         "lambda_description": "Github Webhook Proxy for Jenkins",
         "profile_name": "default",
         "project_name": "yourproject",
-        "runtime": "python3.9",
+        "runtime": "python3.12",
         "s3_bucket": "github-webhooks",
         "tags": {
            "service": "github-webhook"
