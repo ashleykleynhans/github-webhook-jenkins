@@ -117,7 +117,10 @@ def setup_logging():
     logging.getLogger().addHandler(stream_handler)
 
 
+# Configure logging at module load time (required for AWS Lambda/Zappa)
+setup_logging()
+
+
 if __name__ == '__main__':
     args = get_args()
-    setup_logging()
     app.run(host=args.host, port=args.port)
